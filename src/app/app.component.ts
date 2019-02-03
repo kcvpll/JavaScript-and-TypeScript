@@ -34,12 +34,18 @@ myData.printMessages();
 class myClass {
   constructor(name, weather){
     this.name = name;
-    this.weather = weather;
+    this._weather = weather;
+  }
+  set weather(value){
+    this._weather = value;
+  }
+  get weather (){
+    return `Today is ${this._weather}`;
   }
 
   printMessages(){  
     console.log("Hello " + this.name );
-    console.log ("The weather is " + this.weather);
+    console.log (this.weather);
   }
 }
 let myData = new myClass ("Pavel", "cold"); 
