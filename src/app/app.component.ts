@@ -50,3 +50,16 @@ class myClass {
 }
 let myData = new myClass ("Pavel", "cold"); 
 myData.printMessages();
+
+class MySubClass extends myClass {
+  constructor(name, weather, city){
+    super(name, weather);
+    this.city = city;
+  }
+  printMessages(){
+    super.printMessages();
+    console.log(`You are in ${this.city}`);
+  }
+}
+let myData = new MySubClass("Pavel", "sunny", "Karshi");
+myData.printMessages();
