@@ -19,3 +19,14 @@ let totalValue = products
 .filter(item => item.stock)
 .reduce((prev, item) => prev + (item.price * item.stock), 0);
 console.log("Total value: " + totalValue.toFixed(2));
+
+
+let myData = {
+  name: "Pavel",
+  weather: "sunny",
+  printMessages: function (){
+    console.log("Hello " + this.name );
+    console.log ("The weather is " + this.weather);
+  }
+};
+myData.printMessages();
